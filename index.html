@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rizky Benediktus - IET Student</title>
+
+    <!-- Font Poppins & CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <a href="#home" class="logo">Profile</a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#project">Project</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="hero-text">
+            <p class="hi">HI I am</p>
+            <h3 class="name">Rizky Benediktus</h3>
+            <h1 class="title">IET <span>Student</span></h1>
+        </div>
+
+        <div class="hero-img">
+            <!-- Ganti dengan <img src="images/hero.png" alt="Rizky"> jika memakai foto asli -->
+            <svg viewBox="0 0 200 300" role="img" aria-label="Siluet Karakter">
+                <path
+                    d="M100 10c14 0 22 10 22 24 0 12-6 20-12 26l30 14c10 5 14 14 14 26l4 52-14 6-6-40-6 90 8 52h-22l-10-64-10 64H76l8-52-6-90-6 40-14-6 4-52c0-12 4-21 14-26l30-14c-6-6-12-14-12-26 0-14 8-24 22-24z"
+                    fill="#050505" 
+                    stroke="#22d3ee" 
+                    stroke-width="2.5" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+        <h2 class="section-title">About Me</h2>
+        <p class="section-sub">Internet Engineering</p>
+
+        <div class="about-content">
+            <div class="logos">
+                <span class="logo-oracle">ORACLE</span>
+                <span class="logo-aws">aws</span>
+                <span class="logo-cisco">CISCO</span>
+            </div>
+
+            <div class="about-text">
+                <p>Halo, saya Rizky Benediktus!</p>
+                <p>
+                    Saat ini saya sedang menempuh program studi D4 Teknologi Teknik Internet di 
+                    Politeknik Elektronika Negeri Surabaya (PENS). Saya memiliki minat yang mendalam 
+                    terhadap infrastruktur jaringan komputer dan keamanan siber.
+                </p>
+                <p>
+                    Melalui perkuliahan dan eksplorasi mandiri, saya dapat mempelajari perancangan masalah jaringan, 
+                    konfigurasi server, dan digitalisasi untuk mendukung alur kerja bisnis. Saya selalu antusias untuk 
+                    mempelajari hal-hal terbaru di bidang digital teknologi infrastruktur dan menerapkannya dalam 
+                    proyek-proyek praktik.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECT -->
+    <section class="project" id="project">
+        <h2 class="section-title">Project</h2>
+
+        <div class="filter">
+            <button type="button" class="btn-filter active" data-filter="all">All</button>
+            <button type="button" class="btn-filter" data-filter="praktikum">Praktikum</button>
+        </div>
+
+        <div class="cards">
+            <article class="card" data-cat="praktikum">
+                <div class="card-img img-1"></div>
+                <div class="card-info">
+                    <span>Smart City</span>
+                    <small>Categories</small>
+                </div>
+            </article>
+
+            <article class="card" data-cat="praktikum">
+                <div class="card-img img-2"></div>
+                <div class="card-info">
+                    <span>Smart City</span>
+                    <small>Categories</small>
+                </div>
+            </article>
+
+            <article class="card" data-cat="praktikum">
+                <div class="card-img img-3"></div>
+                <div class="card-info">
+                    <span>Smart City</span>
+                    <small>Categories</small>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+        <h2 class="section-title">Contact</h2>
+
+        <form class="contact-form" onsubmit="return false;">
+            <div class="col">
+                <input type="text" name="name" placeholder="Name" aria-label="Nama" required>
+                <input type="tel" name="phone" placeholder="Phone Number" aria-label="Nomor Telepon">
+            </div>
+            <div class="col">
+                <input type="email" name="email" placeholder="Email" aria-label="Email" required>
+                <textarea name="message" placeholder="How Can I Help You?" aria-label="Pesan" required></textarea>
+                <button type="submit" class="btn-send">Send</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <h3 class="footer-name">Rizky Benediktus</h3>
+        <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#project">Project</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="footer-contact">
+            <span>&#9993; rizkybenediktus08@gmail.com</span>
+            <span>&#9990; +62 812 4552 7381</span>
+        </div>
+        <p class="copy">Designed by @rizkybenedic_</p>
+    </footer>
+
+    <!-- SCRIPT FILTER PROYEK -->
+    <script>
+        const filterButtons = document.querySelectorAll('.btn-filter');
+        const projectCards = document.querySelectorAll('.card');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                const selectedCategory = button.dataset.filter;
+                projectCards.forEach(card => {
+                    const match = selectedCategory === 'all' || card.dataset.cat === selectedCategory;
+                    card.style.display = match ? '' : 'none';
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
