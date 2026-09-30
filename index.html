@@ -4,19 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Website profil dan portofolio Rizky Benediktus - Mahasiswa D4 Teknologi Teknik Internet PENS">
     <title>Rizky Benediktus - IET Student</title>
 
-    <!-- Font Poppins & CSS -->
+    <!-- Font Poppins & File CSS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
+    <!-- ================= NAVBAR ================= -->
     <header class="navbar">
         <a href="#home" class="logo">Profile</a>
         <nav>
@@ -28,96 +28,103 @@
         </nav>
     </header>
 
-    <!-- HERO -->
-    <section class="hero" id="home">
-        <div class="hero-text">
-            <p class="hi">HI I am</p>
-            <h3 class="name">Rizky Benediktus</h3>
-            <h1 class="title">IET <span>Student</span></h1>
-        </div>
-
-        <div class="hero-img">
-            <img src="images/hero.png" alt="Rizky Benediktus">
-        </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section class="about" id="about">
-        <h2 class="section-title">About Me</h2>
-        <p class="section-sub">Internet Engineering</p>
-
-        <div class="about-content">
-            <div class="logos">
-                <img src="images/logos.png" alt="Oracle, AWS, and Cisco Logos">
+    <!-- ================= KONTEN UTAMA ================= -->
+    <main>
+        <!-- 1. HERO SECTION -->
+        <section class="hero" id="home">
+            <div class="hero-text">
+                <p class="hi">HI I am</p>
+                <h1 class="name">Rizky Benediktus</h1>
+                <h2 class="title">IET <span>Student</span></h2>
             </div>
 
-            <div class="about-text">
-                <p>Halo, saya Rizky Benediktus!</p>
-                <p>
-                    Saat ini saya sedang menempuh program studi D4 Teknologi Teknik Internet di
-                    Politeknik Elektronika Negeri Surabaya (PENS). Saya memiliki minat yang mendalam
-                    terhadap infrastruktur jaringan komputer dan keamanan siber.
-                </p>
-                <p>
-                    Melalui perkuliahan dan eksplorasi mandiri, saya dapat mempelajari perancangan masalah jaringan,
-                    konfigurasi server, dan digitalisasi untuk mendukung alur kerja bisnis. Saya selalu antusias untuk
-                    mempelajari hal-hal terbaru di bidang digital teknologi infrastruktur dan menerapkannya dalam
-                    proyek-proyek praktik.
-                </p>
+            <div class="hero-img">
+                <img src="images/hero.png" alt="Foto Profil Rizky Benediktus">
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- PROJECT -->
-    <section class="project" id="project">
-        <h2 class="section-title">Project</h2>
+        <!-- 2. ABOUT SECTION -->
+        <section class="about" id="about">
+            <h2 class="section-title">About Me</h2>
+            <p class="section-sub">Internet Engineering</p>
 
-        <div class="filter">
-            <button type="button" class="btn-filter active" data-filter="all">All</button>
-            <button type="button" class="btn-filter" data-filter="praktikum">Praktikum</button>
-        </div>
-
-        <div class="cards">
-            <article class="card" data-cat="praktikum">
-                <div class="card-img img-1">
-                    <img src="images/project-1.jpg" alt="Smart City Project 1">
+            <div class="about-content">
+                <div class="logos">
+                    <img src="images/logos.png" alt="Logo Oracle, AWS, dan Cisco">
                 </div>
-                <div class="card-info">
-                    <span>Smart City</span>
-                    <small>Categories</small>
-                </div>
-            </article>
 
-            <article class="card" data-cat="praktikum">
-                <div class="card-img img-2">
-                    <img src="images/project-2.jpg" alt="Smart City Project 2">
+                <div class="about-text">
+                    <p>Halo, saya Rizky Benediktus!</p>
+                    <p>
+                        Saat ini saya sedang menempuh program studi D4 Teknologi Teknik Internet di
+                        Politeknik Elektronika Negeri Surabaya (PENS). Saya memiliki minat yang mendalam
+                        terhadap infrastruktur jaringan komputer dan keamanan siber.
+                    </p>
+                    <p>
+                        Melalui perkuliahan dan eksplorasi mandiri, saya dapat mempelajari perancangan masalah jaringan,
+                        konfigurasi server, dan digitalisasi untuk mendukung alur kerja bisnis. Saya selalu antusias untuk
+                        mempelajari hal-hal terbaru di bidang digital teknologi infrastruktur dan menerapkannya dalam
+                        proyek-proyek praktik.
+                    </p>
                 </div>
-                <div class="card-info">
-                    <span>Smart City</span>
-                    <small>Categories</small>
-                </div>
-            </article>
-        </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="contact" id="contact">
-        <h2 class="section-title">Contact</h2>
-
-        <form class="contact-form" onsubmit="return false;">
-            <div class="col">
-                <input type="text" name="name" placeholder="Name" aria-label="Nama" required>
-                <input type="tel" name="phone" placeholder="Phone Number" aria-label="Nomor Telepon">
             </div>
-            <div class="col">
-                <input type="email" name="email" placeholder="Email" aria-label="Email" required>
-                <textarea name="message" placeholder="How Can I Help You?" aria-label="Pesan" required></textarea>
-                <button type="submit" class="btn-send">Send</button>
-            </div>
-        </form>
-    </section>
+        </section>
 
-    <!-- FOOTER -->
+        <!-- 3. PROJECT SECTION -->
+        <section class="project" id="project">
+            <h2 class="section-title">Project</h2>
+
+            <!-- Kategori / Filter Mockup (HTML Fundamental) -->
+            <div class="filter">
+                <button type="button" class="btn-filter active">All</button>
+                <button type="button" class="btn-filter">Praktikum</button>
+            </div>
+
+            <div class="cards">
+                <!-- Kartu Proyek 1 -->
+                <article class="card">
+                    <div class="card-img img-1">
+                        <img src="images/project-1.jpg" alt="Smart City Project 1">
+                    </div>
+                    <div class="card-info">
+                        <span>Smart City</span>
+                        <small>Categories</small>
+                    </div>
+                </article>
+
+                <!-- Kartu Proyek 2 -->
+                <article class="card">
+                    <div class="card-img img-2">
+                        <img src="images/project-2.jpg" alt="Smart City Project 2">
+                    </div>
+                    <div class="card-info">
+                        <span>Smart City</span>
+                        <small>Categories</small>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 4. CONTACT SECTION -->
+        <section class="contact" id="contact">
+            <h2 class="section-title">Contact</h2>
+
+            <!-- Form Kontak (HTML Standar tanpa JavaScript) -->
+            <form class="contact-form" action="#" method="post">
+                <div class="col">
+                    <input type="text" name="name" placeholder="Name" aria-label="Nama" required>
+                    <input type="tel" name="phone" placeholder="Phone Number" aria-label="Nomor Telepon">
+                </div>
+                <div class="col">
+                    <input type="email" name="email" placeholder="Email" aria-label="Email" required>
+                    <textarea name="message" placeholder="How Can I Help You?" aria-label="Pesan" required></textarea>
+                    <button type="submit" class="btn-send">Send</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
     <footer class="footer">
         <h3 class="footer-name">Rizky Benediktus</h3>
         <ul class="footer-links">
@@ -132,24 +139,6 @@
         <p class="copy">Designed by @rizkybenedic_</p>
     </footer>
 
-    <!-- SCRIPT FILTER PROYEK -->
-    <script>
-        const filterButtons = document.querySelectorAll('.btn-filter');
-        const projectCards = document.querySelectorAll('.card');
-
-        filterButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                filterButtons.forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
-
-                const selectedCategory = button.dataset.filter;
-                projectCards.forEach(card => {
-                    const match = selectedCategory === 'all' || card.dataset.cat === selectedCategory;
-                    card.style.display = match ? '' : 'none';
-                });
-            });
-        });
-    </script>
 </body>
 
 </html>

@@ -1,4 +1,6 @@
-/* --- TEMA & WARNA --- */
+/* ===================================================
+   1. TEMA & VARIABEL WARNA (CSS Custom Properties)
+   =================================================== */
 :root {
   --bg: #121212;
   --bg-2: #1c1c1c;
@@ -9,44 +11,126 @@
   --accent-2: #06b6d4;
 }
 
-/*RESET & DASAR*/
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { font-family: 'Poppins', sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.6; }
-a { color: inherit; text-decoration: none; }
-ul { list-style: none; }
+/* ===================================================
+   2. RESET & PENGATURAN DASAR
+   =================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-/*NAVBAR*/
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ===================================================
+   3. NAVBAR (Navigasi Atas)
+   =================================================== */
 .navbar {
-  position: sticky; top: 0; z-index: 100;
-  display: flex; justify-content: space-between; align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 22px 6%;
   background: rgba(18, 18, 18, 0.92);
   backdrop-filter: blur(6px);
 }
-.logo { font-size: 1.3rem; font-weight: 700; color: var(--accent-2); transition: opacity 0.2s ease; }
-.logo:hover { opacity: 0.85; }
-.nav-links { display: flex; gap: 32px; font-size: 0.9rem; }
-.nav-links a { color: var(--text); transition: color 0.2s ease; }
-.nav-links a:hover, .nav-links a.active { color: var(--accent-2); }
 
-/* HERO */
-.hero {
-  display: flex; align-items: center; justify-content: space-between;
-  min-height: 520px; padding: 40px 12%;
+.logo {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--accent-2);
+  transition: opacity 0.2s ease;
 }
-.hero-text { position: relative; }
+
+.logo:hover {
+  opacity: 0.85;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+  font-size: 0.9rem;
+}
+
+.nav-links a {
+  color: var(--text);
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--accent-2);
+}
+
+/* ===================================================
+   4. HERO SECTION
+   =================================================== */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 520px;
+  padding: 40px 12%;
+}
+
+.hero-text {
+  position: relative;
+}
 
 /* Efek glow neon di belakang teks hero */
 .hero-text::before {
-  content: ""; position: absolute; left: -90px; top: -60px;
-  width: 260px; height: 260px; z-index: -1;
+  content: "";
+  position: absolute;
+  left: -90px;
+  top: -60px;
+  width: 260px;
+  height: 260px;
+  z-index: -1;
   background: radial-gradient(circle, rgba(14, 165, 217, 0.22), transparent 70%);
 }
-.hi { font-size: 0.95rem; color: var(--muted); }
-.name { font-weight: 500; font-size: 1.1rem; margin-bottom: 4px; }
-.title { font-size: 3rem; font-weight: 700; color: var(--accent); line-height: 1.1; }
-.title span { color: var(--accent-2); }
+
+.hi {
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.name {
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1.1;
+}
+
+.title span {
+  color: var(--accent-2);
+}
+
 .hero-img img {
   width: 100%;
   max-width: 270px;
@@ -54,22 +138,44 @@ ul { list-style: none; }
   object-fit: contain;
   filter: drop-shadow(0 0 20px rgba(34, 211, 238, 0.35));
 }
-.hero-img svg { width: 240px; height: auto; filter: drop-shadow(0 0 18px rgba(34, 211, 238, 0.35)); }
 
-/*  SECTION TITLE  */
-.section-title { font-size: 1.6rem; font-weight: 600; text-align: center; }
-.section-sub { text-align: center; color: var(--muted); font-size: 0.8rem; margin-top: 6px; }
+/* ===================================================
+   5. JUDUL SECTION (UMUM)
+   =================================================== */
+.section-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-align: center;
+}
 
-/*  ABOUT  */
-.about { padding: 80px 12% 60px; }
-.about-content { display: flex; align-items: center; gap: 60px; margin-top: 48px; }
-/* logo Oracle, AWS, Cisco */
+.section-sub {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.8rem;
+  margin-top: 6px;
+}
+
+/* ===================================================
+   6. ABOUT SECTION
+   =================================================== */
+.about {
+  padding: 80px 12% 60px;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  margin-top: 48px;
+}
+
 .logos {
   flex: 0 0 240px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .logos img {
   width: 100%;
   max-width: 230px;
@@ -77,18 +183,47 @@ ul { list-style: none; }
   object-fit: contain;
   display: block;
 }
-.about-text { font-size: 0.8rem; color: #cfcfcf; }
-.about-text p { margin-bottom: 12px; }
 
-/* PROJECT */
-.project { padding: 60px 4% 70px; }
-.filter { display: flex; justify-content: center; gap: 14px; margin: 24px 0 26px; }
-.btn-filter {
-  font-family: inherit; font-size: 0.75rem; padding: 8px 22px;
-  border: none; border-radius: 6px; cursor: pointer;
-  background: var(--card); color: var(--text); transition: background 0.2s, color 0.2s;
+.about-text {
+  font-size: 0.8rem;
+  color: #cfcfcf;
 }
-.btn-filter.active { background: var(--accent-2); color: #ffffff; }
+
+.about-text p {
+  margin-bottom: 12px;
+}
+
+/* ===================================================
+   7. PROJECT SECTION (KARTU PROYEK)
+   =================================================== */
+.project {
+  padding: 60px 4% 70px;
+}
+
+.filter {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin: 24px 0 26px;
+}
+
+.btn-filter {
+  font-family: inherit;
+  font-size: 0.75rem;
+  padding: 8px 22px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: var(--card);
+  color: var(--text);
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-filter.active {
+  background: var(--accent-2);
+  color: #ffffff;
+}
+
 .cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -96,57 +231,218 @@ ul { list-style: none; }
   max-width: 900px;
   margin: 0 auto;
 }
+
 .card {
-  background: var(--card); border-radius: 12px; overflow: hidden;
+  background: var(--card);
+  border-radius: 12px;
+  overflow: hidden;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-.card:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); }
-.card-img { height: 230px; background-size: cover; background-position: center; }
-.card-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.img-1 { background: linear-gradient(135deg, #cfcfcf, #8f8f8f); }
-.img-2 { background: linear-gradient(135deg, #1a2b45, #2a6fb0); }
-.card-info { display: flex; justify-content: space-between; align-items: center; padding: 10px 12px; font-size: 0.75rem; }
-.card-info small { color: var(--muted); font-size: 0.65rem; }
 
-/*  CONTACT  */
-.contact { padding: 40px 12% 80px; }
-.contact-form { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; max-width: 640px; margin: 30px auto 0; }
-.contact-form .col { display: flex; flex-direction: column; gap: 12px; }
-.contact-form input, .contact-form textarea {
-  width: 100%; font-family: inherit; font-size: 0.75rem; color: var(--text);
-  background: var(--card); border: 1px solid transparent; border-radius: 4px;
-  padding: 10px 12px; transition: border-color 0.2s;
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
-.contact-form textarea { height: 76px; resize: none; }
-.contact-form ::placeholder { color: var(--muted); }
-.contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--accent-2); }
+
+.card-img {
+  height: 230px;
+  background-size: cover;
+  background-position: center;
+}
+
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.img-1 {
+  background: linear-gradient(135deg, #cfcfcf, #8f8f8f);
+}
+
+.img-2 {
+  background: linear-gradient(135deg, #1a2b45, #2a6fb0);
+}
+
+.card-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  font-size: 0.75rem;
+}
+
+.card-info small {
+  color: var(--muted);
+  font-size: 0.65rem;
+}
+
+/* ===================================================
+   8. CONTACT SECTION (FORMULIR KONTAK)
+   =================================================== */
+.contact {
+  padding: 40px 12% 80px;
+}
+
+.contact-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  max-width: 640px;
+  margin: 30px auto 0;
+}
+
+.contact-form .col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  font-family: inherit;
+  font-size: 0.75rem;
+  color: var(--text);
+  background: var(--card);
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 10px 12px;
+  transition: border-color 0.2s;
+}
+
+.contact-form textarea {
+  height: 76px;
+  resize: none;
+}
+
+.contact-form ::placeholder {
+  color: var(--muted);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--accent-2);
+}
+
 .btn-send {
-  align-self: flex-end; font-family: inherit; font-size: 0.75rem;
-  background: transparent; color: var(--text); border: 1px solid var(--muted);
-  border-radius: 4px; padding: 6px 22px; cursor: pointer; transition: all 0.2s ease;
+  align-self: flex-end;
+  font-family: inherit;
+  font-size: 0.75rem;
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--muted);
+  border-radius: 4px;
+  padding: 6px 22px;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
-.btn-send:hover { border-color: var(--accent-2); color: var(--accent-2); }
 
-/*  FOOTER  */
-.footer { background: var(--bg-2); text-align: center; padding: 40px 6% 22px; }
-.footer-name { color: var(--accent-2); font-size: 1rem; font-weight: 600; }
-.footer-links { display: flex; justify-content: center; gap: 28px; margin: 18px 0; font-size: 0.75rem; }
-.footer-links a:hover { color: var(--accent-2); }
-.footer-contact { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; font-size: 0.7rem; color: #cfcfcf; }
-.copy { margin: 22px auto 0; padding-top: 12px; max-width: 320px; border-top: 1px solid #333; font-size: 0.6rem; color: var(--muted); }
+.btn-send:hover {
+  border-color: var(--accent-2);
+  color: var(--accent-2);
+}
 
-/* RESPONSIVE Layar */
+/* ===================================================
+   9. FOOTER (Bagian Bawah Halaman)
+   =================================================== */
+.footer {
+  background: var(--bg-2);
+  text-align: center;
+  padding: 40px 6% 22px;
+}
+
+.footer-name {
+  color: var(--accent-2);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  margin: 18px 0;
+  font-size: 0.75rem;
+}
+
+.footer-links a:hover {
+  color: var(--accent-2);
+}
+
+.footer-contact {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  font-size: 0.7rem;
+  color: #cfcfcf;
+}
+
+.copy {
+  margin: 22px auto 0;
+  padding-top: 12px;
+  max-width: 320px;
+  border-top: 1px solid #333;
+  font-size: 0.6rem;
+  color: var(--muted);
+}
+
+/* ===================================================
+   10. RESPONSIVE DESIGN (Media Query untuk Mobile/Tablet)
+   =================================================== */
 @media (max-width: 800px) {
-  .navbar { padding: 16px 5%; }
-  .nav-links { gap: 16px; font-size: 0.8rem; }
-  .hero { flex-direction: column-reverse; text-align: center; padding: 30px 8%; }
-  .hero-text::before { left: 50%; transform: translateX(-50%); }
-  .title { font-size: 2.3rem; }
-  .hero-img svg { width: 180px; }
-  .hero-img img { max-width: 200px; }
-  .about, .contact { padding-left: 7%; padding-right: 7%; }
-  .about-content { flex-direction: column; gap: 32px; }
-  .logos img { max-width: 190px; }
-  .cards { grid-template-columns: 1fr; gap: 14px; }
-  .contact-form { grid-template-columns: 1fr; }
+  .navbar {
+    padding: 16px 5%;
+  }
+
+  .nav-links {
+    gap: 16px;
+    font-size: 0.8rem;
+  }
+
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 30px 8%;
+  }
+
+  .hero-text::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .title {
+    font-size: 2.3rem;
+  }
+
+  .hero-img img {
+    max-width: 200px;
+  }
+
+  .about,
+  .contact {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+
+  .about-content {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .logos img {
+    max-width: 190px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .contact-form {
+    grid-template-columns: 1fr;
+  }
 }
