@@ -1,6 +1,4 @@
-/* ===================================================
-   1. TEMA & VARIABEL WARNA (CSS Custom Properties)
-   =================================================== */
+/* 1. TEMA & VARIABEL WARNA (CSS Custom Properties) */
 :root {
   --bg: #121212;
   --bg-2: #1c1c1c;
@@ -11,9 +9,7 @@
   --accent-2: #06b6d4;
 }
 
-/* ===================================================
-   2. RESET & PENGATURAN DASAR
-   =================================================== */
+/* 2. RESET & PENGATURAN DASAR */
 * {
   margin: 0;
   padding: 0;
@@ -40,9 +36,7 @@ ul {
   list-style: none;
 }
 
-/* ===================================================
-   3. NAVBAR (Navigasi Atas)
-   =================================================== */
+/* 3. NAVBAR */
 .navbar {
   position: sticky;
   top: 0;
@@ -82,10 +76,8 @@ ul {
   color: var(--accent-2);
 }
 
-/* ===================================================
-   4. HERO SECTION
-   =================================================== */
-.hero {
+/* 4. PROFILE SECTION */
+.profile {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -93,12 +85,12 @@ ul {
   padding: 40px 12%;
 }
 
-.hero-text {
+.profile-text {
   position: relative;
 }
 
-/* Efek glow neon di belakang teks hero */
-.hero-text::before {
+/* Efek glow neon di belakang teks */
+.profile-text::before {
   content: "";
   position: absolute;
   left: -90px;
@@ -131,7 +123,7 @@ ul {
   color: var(--accent-2);
 }
 
-.hero-img img {
+.profile-img img {
   width: 100%;
   max-width: 270px;
   height: auto;
@@ -139,9 +131,7 @@ ul {
   filter: drop-shadow(0 0 20px rgba(34, 211, 238, 0.35));
 }
 
-/* ===================================================
-   5. JUDUL SECTION (UMUM)
-   =================================================== */
+/* 5. JUDUL SECTION (UMUM) */
 .section-title {
   font-size: 1.6rem;
   font-weight: 600;
@@ -155,9 +145,7 @@ ul {
   margin-top: 6px;
 }
 
-/* ===================================================
-   6. ABOUT SECTION
-   =================================================== */
+/* 6. ABOUT SECTION */
 .about {
   padding: 80px 12% 60px;
 }
@@ -193,9 +181,7 @@ ul {
   margin-bottom: 12px;
 }
 
-/* ===================================================
-   7. PROJECT SECTION (KARTU PROYEK)
-   =================================================== */
+/* 7. PROJECT SECTION (KARTU PROYEK) */
 .project {
   padding: 60px 4% 70px;
 }
@@ -278,9 +264,7 @@ ul {
   font-size: 0.65rem;
 }
 
-/* ===================================================
-   8. CONTACT SECTION (FORMULIR KONTAK)
-   =================================================== */
+/* 8. CONTACT SECTION (FORMULIR KONTAK) */
 .contact {
   padding: 40px 12% 80px;
 }
@@ -345,9 +329,7 @@ ul {
   color: var(--accent-2);
 }
 
-/* ===================================================
-   9. FOOTER (Bagian Bawah Halaman)
-   =================================================== */
+/* 9. FOOTER (Bagian Bawah Halaman) */
 .footer {
   background: var(--bg-2);
   text-align: center;
@@ -390,9 +372,7 @@ ul {
   color: var(--muted);
 }
 
-/* ===================================================
-   10. RESPONSIVE DESIGN (Media Query untuk Mobile/Tablet)
-   =================================================== */
+/* 10. RESPONSIVE DESIGN */
 @media (max-width: 800px) {
   .navbar {
     padding: 16px 5%;
@@ -403,13 +383,13 @@ ul {
     font-size: 0.8rem;
   }
 
-  .hero {
+  .profile {
     flex-direction: column-reverse;
     text-align: center;
     padding: 30px 8%;
   }
 
-  .hero-text::before {
+  .profile-text::before {
     left: 50%;
     transform: translateX(-50%);
   }
@@ -418,7 +398,7 @@ ul {
     font-size: 2.3rem;
   }
 
-  .hero-img img {
+  .profile-img img {
     max-width: 200px;
   }
 
